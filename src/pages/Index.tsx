@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import { Tweet } from "../components/Tweet"
 import { Navbar } from "../components/Navbar"
 
 import twitterLogo from "../assets/twitter-logo.svg"
+import { Content } from "../components/Content"
 
 export function Index() {
   return (
@@ -13,14 +13,14 @@ export function Index() {
         <Navbar />
 
         <button
-          className="bg-twitter-blue rounded-[999px] p-4 flex justify-center w-full text-white text-lg font-roboto font-black border-0
+          className="bg-twitter-blue rounded-full p-4 flex justify-center w-full text-white text-lg font-roboto font-black border-0
           hover:brightness-95"
           type="button"
         >
           Tweet
         </button>
       </aside>
-      <div className="border-x border-x-[#ebeef0] border-solid ">content</div>
+      <Content />
     </div>
   )
 }
