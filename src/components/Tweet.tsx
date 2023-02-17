@@ -1,9 +1,15 @@
 import { ArrowClockwise, ChatCircle, Heart } from "phosphor-react"
 
-export function Tweet() {
+import { Link } from "react-router-dom"
+
+interface TweetProps {
+  content: string
+}
+
+export function Tweet(props: TweetProps) {
   return (
-    <a
-      href="#"
+    <Link
+      to="/status"
       className="py-5 p-5 grid grid-cols-[3rem_1fr] gap-3 border-b border-[#ebeef0] "
     >
       <img
@@ -20,7 +26,7 @@ export function Tweet() {
           </span>
         </div>
 
-        <p className="font-roboto leading-5">Testando um tweet</p>
+        <p className="font-roboto leading-5">{props.content}</p>
 
         <div className="flex items-center gap-12 mt-3">
           <button
@@ -48,6 +54,6 @@ export function Tweet() {
           </button>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }

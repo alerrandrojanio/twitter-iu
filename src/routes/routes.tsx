@@ -1,15 +1,15 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom"
 
-import { App } from "../App"
+import { Status } from "../pages/Status"
+import { Timeline } from "../pages/Timeline"
 
-export const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<App />} />
-    </>
-  )
-)
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Timeline />,
+  },
+  {
+    path: "/status",
+    element: <Status />,
+  },
+])
