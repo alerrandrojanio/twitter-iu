@@ -9,7 +9,7 @@ import { App } from "../App"
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/twitter" element={<App />} />
+      <Route path="/" element={<App />} />
     </>
   )
 )
