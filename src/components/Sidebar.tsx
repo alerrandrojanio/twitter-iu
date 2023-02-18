@@ -7,73 +7,76 @@ import {
   FileText,
   User,
   DotsThreeCircle,
+  Pencil,
 } from "phosphor-react"
 
 import twitterLogo from "../assets/twitter-logo.svg"
 
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export function Sidebar() {
   return (
-    <aside className="py-6 px-5 flex flex-col gap-8">
-      <img src={twitterLogo} alt="Logo" className="w-8 h-8" />
+    <aside className="py-6 px-5 flex flex-col gap-8 max-md:px-3 max-md:items-center">
+      <a href="">
+        <img src={twitterLogo} alt="Logo" className="w-8 h-8" />
+      </a>
 
       <nav className="flex flex-col gap-8">
-        <a
-          href="#"
-          className="flex items-center gap-5 text-xl font-roboto font-bold text-twitter-blue"
+        <NavLink
+          to="/"
+          className="flex items-center gap-5 text-xl font-roboto font-bold [&.active]:text-twitter-blue"
         >
           <House className="w-8 h-8" weight="fill" />
-          Home
-        </a>
+          <span className="max-md:hidden">Home</span>
+        </NavLink>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <Hash className="w-8 h-8" />
-          Explore
+          <span className="max-md:hidden">Explore</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <Bell className="w-8 h-8" />
-          Notifications
+          <span className="max-md:hidden">Notifications</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <Envelope className="w-8 h-8" />
-          Messages
+          <span className="max-md:hidden">Messages</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <BookmarkSimple className="w-8 h-8" />
-          Bookmarks
+          <span className="max-md:hidden">Bookmarks</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <FileText className="w-8 h-8" />
-          Lists
+          <span className="max-md:hidden">Lists</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <User className="w-8 h-8" />
-          Profile
+          <span className="max-md:hidden">Profile</span>
         </a>
         <a
           href=""
           className="flex items-center gap-5 text-xl font-roboto font-bold"
         >
           <DotsThreeCircle className="w-8 h-8" />
-          More
+          <span className="max-md:hidden">More</span>
         </a>
       </nav>
 
@@ -82,7 +85,8 @@ export function Sidebar() {
   hover:brightness-95"
         type="button"
       >
-        Tweet
+        <Pencil className="w-6 h-6 hidden max-md:block" />
+        <span className="max-md:hidden">Tweet</span>
       </button>
     </aside>
   )
