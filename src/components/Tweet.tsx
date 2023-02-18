@@ -10,7 +10,7 @@ export function Tweet(props: TweetProps) {
   return (
     <Link
       to="/status"
-      className="py-5 p-5 grid grid-cols-[3rem_1fr] gap-3 border-b border-[#ebeef0] "
+      className="py-5 p-5 grid grid-cols-[3rem_1fr] gap-3 border-b border-[#ebeef0] dark:border-zinc-700"
     >
       <img
         src="https://github.com/alerrandrojanio.png"

@@ -39,7 +39,7 @@ export function Timeline() {
           <textarea
             id="tweet"
             placeholder="What's happening?"
-            className="flex-1 mt-3 border-0 font-roboto font-medium text-xl resize-none focus:outline-none placeholder:text-[#5b7083]"
+            className="flex-1 mt-3 border-0 font-roboto font-medium text-xl resize-none focus:outline-none placeholder:text-[#5b7083] dark:bg-transparent"
             value={newTweet}
             onKeyDown={handleHotKeySubmit}
             onChange={(event) => setNewTweet(event.target.value)}
@@ -48,7 +48,7 @@ export function Timeline() {
 
         <button
           type="submit"
-          className="ml-auto bg-twitter-blue rounded-full py-3 px-6 text-white font-roboto font-black border-0 hover:brightness-95"
+          className="ml-auto bg-twitter-blue rounded-full py-3 px-6 text-white font-roboto font-black border-0 hover:brightness-95 dark:bg-twitter-purple"
         >
           Tweet
         </button>

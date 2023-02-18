@@ -24,7 +24,7 @@ export function Sidebar() {
       <nav className="flex flex-col gap-8">
         <NavLink
           to="/"
-          className="flex items-center gap-5 text-xl font-roboto font-bold [&.active]:text-twitter-blue"
+          className="flex items-center gap-5 text-xl font-roboto font-bold [&.active]:text-twitter-blue dark:[&.active]:text-twitter-purple"
         >
           <House className="w-8 h-8" weight="fill" />
           <span className="max-md:hidden">Home</span>
@@ -82,7 +82,7 @@ export function Sidebar() {
 
       <button
         className="bg-twitter-blue rounded-full p-4 flex justify-center w-full text-white text-lg font-roboto font-black border-0
-  hover:brightness-95"
+  hover:brightness-95 dark:bg-twitter-purple"
         type="button"
       >
         <Pencil className="w-6 h-6 hidden max-md:block" />
